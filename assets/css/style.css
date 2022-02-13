@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+/* Google Fonts */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* Important Property Of CSS */
+
+header {
+    background: #f1f1f1;
+    /* position: sticky; */
+    /* width: 100%; */
+    top: 0;
+}
+.gap_area {
+    max-width: 80%;
+    /* background: teal; */
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_menu_area {
+    display: flex;
+}
+.main_menu_area li {
+    padding: 25px 20px;
+    position: relative;
+}
+.main_menu_area li a{
+    font-size: 20px;
+    font-family: verdana;
+}
+.logo {
+    font-size: 40px;
+}
+.main_menu_area li:hover {
+    background: #f00;
+}
+.main_menu_area li:hover a{
+    color: #fff;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top:75px;
+    left:0;
+    width: 100%;
+    text-align: center;
+    background: #f1f1f1;
+}
+.main_menu_area li:hover .dropdown {
+    display: block;
+}
+.main_menu_area li:hover .dropdown li a {
+    color: #000;
+}
+.main_menu_area li:hover .dropdown li:hover a {
+    color: #fff;
+}
+.dropdown li {
+    position: relative;
+}
+.subdrop {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background: #f1f1f1;
+}
+.dropdown li:hover .subdrop {
+    display: block;
+}
+.main_menu_area li:hover .dropdown li:hover .subdrop li a {
+    color: #000;
+}
+.main_menu_area li:hover .dropdown li:hover .subdrop li:hover a {
+    color: #fff;
+}
+
+h3 {
+    font-family: 'Comforter', cursive;
+}
+.center {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+}
+.box {
+    margin: 30px auto;
+    height: 200px;
+    width: 200px;
+    background: teal;
+    border: 12px dashed #f00;
+    /* border-color: #f00;
+    border-width: 12px;
+    border-style: dashed; */
+    /* background-clip:; */
+    border-radius: 50% 0 0% 0;
+}
+
+
+.hero_part {
+    background: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    height: 90vh;
+}
+
+.hero_part > .gap_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} 
+.design_box {
+    height: 450px;
+    width: 300px;
+    background: linear-gradient(45deg, #698756 0 33%, #d8cd35 33% 66%, #f00 66% 100%);
+    box-shadow: 0px 0px 0 10px #000,
+                0 0 0 20px #f11,
+                0 0 0 30px #f166;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.design_box > form > .input {
+    /* display: block; */
+    height: 40px;
+    width: 240px;
+    outline: 0;
+    border:none;
+    border-radius: 30px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background: lightgoldenrodyellow;
+    caret-color: #f00;
+    color: rgb(228, 188, 78);
+}
+.design_box > form > .input::placeholder {
+    color: rgb(170, 19, 19);
+    font-size: 14px;
+}
+.design_box > form > button {
+    margin-left: -43px;
+    height: 40px;
+    width: 40px;
+    background: rgb(21, 245, 159);
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor:pointer;
+}
+
+.animation_part {
+    height: 100vh;
+}
+
+
+.animation_part > .gap_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.animation_con button {
+    height: 60px;
+    width: 280px;
+    border: 5px solid #000;
+    background: transparent;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.animation_con button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f00;
+    height: 100%;
+    width: 100%;
+    transition: all ease-in-out 1s;
+    z-index: -1;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+}
+.animation_con button:hover::before {
+    /* left: -100%; */
+    transform: rotate(0);
+}
